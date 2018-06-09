@@ -1,0 +1,49 @@
+
+
+import java.util.Scanner;
+
+public class TicTacToe
+{
+    private static Scanner in = new Scanner(System.in);
+	private static boolean isX = false;
+	
+	public static void main(String[] args)
+	{
+		char[][] board = {{'1','2','3'},{'4','5','6'},{'7','8','9'}};
+		
+		do
+		{
+			//TODO: switch the player's turn 
+			//      (if isX is true, make it false, and vice versa)
+
+			print(board);
+			board = playerTurn(board);
+			
+		} while( !checkWin(board) );
+	}
+	
+	public static void print(char[][] board)
+	{
+		//TODO: print the board
+	}
+	
+	public static char[][] playerTurn(char[][] board)
+	{
+		//set player to the person's turn
+		char player = isX ? 'X' : 'O';
+		
+		//ask the user for the spot they want
+		System.out.print("Player " + player + ", where would you like to go? > ");
+		int spot = in.nextInt();
+		
+		//TODO: set that spot to the player's letter (char player)
+				
+		return board;
+	}
+	
+	public static boolean checkWin(char[][] board)
+	{
+		//TODO: check for win
+		return false;
+	}
+}
